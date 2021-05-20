@@ -1,0 +1,25 @@
+<div>
+    <h1>Guide</h1>
+    <div style="overflow-x:auto;">
+      <table  id="features">
+          <tr>
+            <th mat-sort-header="name">The main features of the app</th>
+          </tr>
+        
+          <tr *ngFor="let feature of features">
+            <td>{{feature.name}}</td>
+          </tr>
+        </table>
+        </div>
+    
+    <div class="example-button-row">
+      <button mat-button disabled>New features request</button>
+      </div>
+
+    <div class="example-button-row">
+        <button mat-raised-button color="primary" routerLink="/tickets" >Home</button>
+
+    </div>
+      
+
+</div>

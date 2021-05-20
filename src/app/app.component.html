@@ -1,0 +1,41 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a href="#" class="navbar-brand">TMForum</a>
+    <div class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a routerLink="tickets" class="nav-link">Tickets</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="add" class="nav-link">Add</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="help" class="nav-link"> Help</a>
+      </li>
+    </div>
+  </nav>
+
+  <div class="container mt-3">
+    <h2 appHighlight>{{ title }}</h2>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+
+</body>
+</html>
