@@ -1,0 +1,29 @@
+<div class="list row">
+  <div class="col-md-6">
+    <h4>Ticket List</h4>
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let ticket of tickets; let i = index"
+        [class.active]="i == currentIndex"
+        
+      >
+      {{ ticket.id }}, {{ ticket.category }}, {{ ticket.status }}, {{ticket.description}}
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <div *ngIf="currentTicket">
+      <app-edit-ticket
+        (refreshList)="refreshList()"
+        [tutorial]="currentTicket"
+      ></app-edit-ticket>
+    </div>
+
+    <div *ngIf="!currentTicket">
+      <br />
+      <p>Please click on a Ticket...</p>
+      <mat-spinner></mat-spinner>
+    </div>
+  </div>
+</div>
